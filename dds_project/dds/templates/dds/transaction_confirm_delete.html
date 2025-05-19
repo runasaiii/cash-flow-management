@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Удаление транзакции</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body class="container mt-4">
+  <h2 class="mb-3">Удалить транзакцию</h2>
+  <p>Вы уверены, что хотите удалить запись от <strong>{{ transaction.date }}</strong> на сумму <strong>{{ transaction.amount }}</strong>?</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Удалить</button>
+    <a href="{% url 'dictionary_management' %}" class="btn btn-secondary">Отмена</a>
+  </form>
+</body>
+</html>

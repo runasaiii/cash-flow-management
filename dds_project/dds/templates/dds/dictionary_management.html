@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Управление справочниками</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div>
+        <a href="{% url 'transaction_list' %}" class="btn btn-outline-primary me-2">Движение денежных средств</a>
+        <a href="{% url 'dictionary_management' %}" class="btn btn-outline-primary active">Управление справочниками</a>
+      </div>
+    </div>
+
+    <h2 class="mb-4">Управление справочниками</h2>
+
+    <div class="mb-5">
+      <h3>Статусы</h3>
+      <a href="{% url 'status_create' %}" class="btn btn-primary mb-2">Добавить статус</a>
+      <ul class="list-group">
+        {% for status in statuses %}
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{ status.name }}
+            <span>
+              <a href="{% url 'status_edit' status.pk %}" class="btn btn-sm btn-warning me-2">Редактировать</a>
+              <a href="{% url 'status_delete' status.pk %}" class="btn btn-sm btn-danger">Удалить</a>
+            </span>
+          </li>
+        {% empty %}
+          <li class="list-group-item">Нет статусов</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="mb-5">
+      <h3>Типы</h3>
+      <a href="{% url 'type_create' %}" class="btn btn-primary mb-2">Добавить тип</a>
+      <ul class="list-group">
+        {% for type in types %}
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{ type.name }}
+            <span>
+              <a href="{% url 'type_edit' type.pk %}" class="btn btn-sm btn-warning me-2">Редактировать</a>
+              <a href="{% url 'type_delete' type.pk %}" class="btn btn-sm btn-danger">Удалить</a>
+            </span>
+          </li>
+        {% empty %}
+          <li class="list-group-item">Нет типов</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="mb-5">
+      <h3>Категории</h3>
+      <a href="{% url 'category_create' %}" class="btn btn-primary mb-2">Добавить категорию</a>
+      <table class="table table-bordered">
+        <thead class="table-light">
+          <tr>
+            <th>Название</th>
+            <th>Тип</th>
+            <th>Действия</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for category in categories %}
+            <tr>
+              <td>{{ category.name }}</td>
+              <td>{{ category.type.name }}</td>
+              <td>
+                <a href="{% url 'category_edit' category.pk %}" class="btn btn-sm btn-warning me-2">Редактировать</a>
+                <a href="{% url 'category_delete' category.pk %}" class="btn btn-sm btn-danger">Удалить</a>
+              </td>
+            </tr>
+          {% empty %}
+            <tr>
+              <td colspan="3" class="text-center">Нет категорий</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <h3>Подкатегории</h3>
+      <a href="{% url 'subcategory_create' %}" class="btn btn-primary mb-2">Добавить подкатегорию</a>
+      <table class="table table-bordered">
+        <thead class="table-light">
+          <tr>
+            <th>Название</th>
+            <th>Категория</th>
+            <th>Действия</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for subcategory in subcategories %}
+            <tr>
+              <td>{{ subcategory.name }}</td>
+              <td>{{ subcategory.category.name }}</td>
+              <td>
+                <a href="{% url 'subcategory_edit' subcategory.pk %}" class="btn btn-sm btn-warning me-2">Редактировать</a>
+                <a href="{% url 'subcategory_delete' subcategory.pk %}" class="btn btn-sm btn-danger">Удалить</a>
+              </td>
+            </tr>
+          {% empty %}
+            <tr>
+              <td colspan="3" class="text-center">Нет подкатегорий</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</body>
+</html>
