@@ -35,7 +35,7 @@
 
 
 ## Установка и запуск
-### 1. Клонирование репозитория
+1. Клонирование репозитория
 git clone https://github.com/runasaiii/cash-flow-management.git
 cd dds_project
 
