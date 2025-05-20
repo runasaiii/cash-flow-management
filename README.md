@@ -35,30 +35,40 @@
 
 
 ## Установка и запуск
-1. Клонирование репозитория
-2. 
+
+### 1. Клонирование репозитория
+
+```
 git clone https://github.com/runasaiii/cash-flow-management.git
-
 cd dds_project
+2. Создание и активация виртуального окружения
+Windows:
 
-3. Создание и активация виртуального окружения
-python -m venv venv  //Windows
+python -m venv venv
+venv\Scripts\activate
+Linux/macOS:
 
-venv\Scripts\activate  //Linux/macOS
 
+python3 -m venv venv
 source venv/bin/activate
-
-5. Установка зависимостей
+3. Установка зависимостей
+bash
+Копировать
+Редактировать
 pip install -r requirements.txt
-
-6. Настройка базы данных и миграции
+4. Настройка базы данных и применение миграций
+bash
+Копировать
+Редактировать
 python manage.py migrate
-
-8. Запуск сервера разработки
+5. Запуск сервера разработки
+bash
+Копировать
+Редактировать
 python manage.py runserver
-
-10. Доступ к приложению
-Откройте в браузере http://127.0.0.1:8000/
+6. Доступ к приложению
+Откройте в браузере: http://127.0.0.1:8000/
+```
 
 Структура проекта
 dds/ — основное приложение Django
