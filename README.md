@@ -52,19 +52,10 @@ Linux/macOS:
 python3 -m venv venv
 source venv/bin/activate
 3. Установка зависимостей
-bash
-Копировать
-Редактировать
 pip install -r requirements.txt
 4. Настройка базы данных и применение миграций
-bash
-Копировать
-Редактировать
 python manage.py migrate
 5. Запуск сервера разработки
-bash
-Копировать
-Редактировать
 python manage.py runserver
 6. Доступ к приложению
 Откройте в браузере: http://127.0.0.1:8000/
