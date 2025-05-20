@@ -38,19 +38,22 @@
 ### 1. Клонирование репозитория
 git clone https://github.com/runasaiii/cash-flow-management.git
 cd dds_project
+
 2. Создание и активация виртуального окружения
-python -m venv venv
-# Windows
-venv\Scripts\activate
-# Linux/macOS
+python -m venv venv  //Windows
+venv\Scripts\activate  //Linux/macOS
 source venv/bin/activate
-3. Установка зависимостей
+
+4. Установка зависимостей
 pip install -r requirements.txt
-4. Настройка базы данных и миграции
+
+6. Настройка базы данных и миграции
 python manage.py migrate
-5. Запуск сервера разработки
+
+8. Запуск сервера разработки
 python manage.py runserver
-6. Доступ к приложению
+
+10. Доступ к приложению
 Откройте в браузере http://127.0.0.1:8000/
 
 Структура проекта
