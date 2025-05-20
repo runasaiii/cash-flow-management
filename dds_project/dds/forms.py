@@ -5,7 +5,7 @@ from django.utils import timezone
 class TransactionForm(forms.ModelForm):
     class Meta:
         model = Transaction
-        fields = '__all__'
+        fields = ['date', 'status', 'type', 'category', 'subcategory', 'amount', 'comment']
         widgets = {
             'type': forms.Select(attrs={'id': 'id_type', 'class': 'form-select'}),
             'category': forms.Select(attrs={'id': 'id_category', 'class': 'form-select'}),
@@ -41,6 +41,17 @@ class TransactionForm(forms.ModelForm):
         elif self.instance.pk and self.instance.category:
             self.fields['subcategory'].queryset = Subcategory.objects.filter(category=self.instance.category)
 
+    #валидация 
+    def clean_amount(self):
+        amount = self.cleaned_data.get('amount')
+        if amount is not None and amount <= 0:
+            raise forms.ValidationError("Сумма должна быть больше нуля.")
+        return amount
+
+
+
+        
+
 
 class StatusForm(forms.ModelForm):
     class Meta:
@@ -61,3 +72,4 @@ class SubcategoryForm(forms.ModelForm):
     class Meta:
         model = Subcategory
         fields = ['name', 'category']
+
