@@ -36,15 +36,19 @@
 
 ## Установка и запуск
 1. Клонирование репозитория
+2. 
 git clone https://github.com/runasaiii/cash-flow-management.git
+
 cd dds_project
 
-2. Создание и активация виртуального окружения
+3. Создание и активация виртуального окружения
 python -m venv venv  //Windows
+
 venv\Scripts\activate  //Linux/macOS
+
 source venv/bin/activate
 
-4. Установка зависимостей
+5. Установка зависимостей
 pip install -r requirements.txt
 
 6. Настройка базы данных и миграции
