@@ -43,12 +43,9 @@ git clone https://github.com/runasaiii/cash-flow-management.git
 cd dds_project
 2. Создание и активация виртуального окружения
 Windows:
-
 python -m venv venv
 venv\Scripts\activate
 Linux/macOS:
-
-
 python3 -m venv venv
 source venv/bin/activate
 3. Установка зависимостей
