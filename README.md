@@ -88,7 +88,9 @@ python manage.py runserver
 ```
 
 📸 Скриншоты
-<img src="https://github.com/user-attachments/assets/7c679d67-eded-47a5-b331-fdbe1465e64c" width="600"/> <img src="https://github.com/user-attachments/assets/084e4d1a-ca1a-434e-a333-8c5d37c2ec0e" width="600"/> <img src="https://github.com/user-attachments/assets/95a193b7-900d-495d-bbf5-f092218c89f3" width="600"/> <img src="https://github.com/user-attachments/assets/e66f4dff-99ac-49ce-962f-872a4677b411" width="600"/>
+<img src="https://github.com/user-attachments/assets/7c679d67-eded-47a5-b331-fdbe1465e64c" width="600"/> 
+<img src="https://github.com/user-attachments/assets/084e4d1a-ca1a-434e-a333-8c5d37c2ec0e" width="600"/> 
+<img src="https://github.com/user-attachments/assets/95a193b7-900d-495d-bbf5-f092218c89f3" width="600"/> 
 
 
 🙌 Благодарю за внимание!
