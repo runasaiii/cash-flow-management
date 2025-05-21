@@ -7,6 +7,8 @@ from django.http import JsonResponse
 
 def transaction_list(request):
     transactions = Transaction.objects.all()
+    transactions = transactions.order_by('-date')  # последние сверху
+
 
     date_from = request.GET.get('date_from')
     date_to = request.GET.get('date_to')
@@ -133,7 +135,7 @@ def type_create(request):
         form = TypeForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('type_list')
+            return redirect('dictionary_management')
     else:
         form = TypeForm()
     return render(request, 'dds/type_form.html', {'form': form})
