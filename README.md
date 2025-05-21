@@ -29,7 +29,7 @@
 ## Технологии
 - Python 3.11
 - Django 5.2.1
-- SQLite (по умолчанию)
+- PostgreSQL
 - Bootstrap 5 для frontend
 - HTML, CSS, JavaScript
 
@@ -59,7 +59,7 @@ python manage.py runserver
 Структура проекта
 dds/ — основное приложение Django
 templates/ — шаблоны HTML с использованием Bootstrap
-static/ — статические файлы (CSS, JS)
+static/ — статические файлы (CSS - bootstrap.min.css, JS - bootstrap.bundle.min.js)
 manage.py — утилита управления проектом
 
 Особенности реализации
@@ -73,7 +73,6 @@ UI сделан с использованием Bootstrap для удобств�
 ![image](https://github.com/user-attachments/assets/084e4d1a-ca1a-434e-a333-8c5d37c2ec0e)
 ![image](https://github.com/user-attachments/assets/95a193b7-900d-495d-bbf5-f092218c89f3)
 ![image](https://github.com/user-attachments/assets/e66f4dff-99ac-49ce-962f-872a4677b411)
-![image](https://github.com/user-attachments/assets/c5abe869-60c7-41f7-b4d8-e95f35c4a9b0)
 
 
 
